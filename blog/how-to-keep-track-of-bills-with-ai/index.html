@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Keep Track of Bills with AI (Without Letting It Pay Anything) · Field Guide to Bots</title>
+<meta name="description" content="Use AI to build a bill calendar, catch due dates, and review subscriptions — while you keep every payment in your own hands. Copy-paste prompts included.">
+<meta name="author" content="Traci Anderson">
+<meta name="theme-color" content="#173E2B">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fieldguidetobots.com/blog/how-to-keep-track-of-bills-with-ai/">
+<link rel="icon" type="image/png" href="https://fieldguidetobots.com/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://fieldguidetobots.com/assets/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Field Guide to Bots">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fieldguidetobots.com/blog/how-to-keep-track-of-bills-with-ai/">
+<meta property="og:title" content="How to Keep Track of Bills with AI (Without Letting It Pay Anything) · Field Guide to Bots">
+<meta property="og:description" content="Use AI to build a bill calendar, catch due dates, and review subscriptions — while you keep every payment in your own hands. Copy-paste prompts included.">
+<meta property="og:image" content="https://fieldguidetobots.com/assets/cover-the-bills-helper.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cover of The Bills Helper field guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Keep Track of Bills with AI (Without Letting It Pay Anything) · Field Guide to Bots">
+<meta name="twitter:description" content="Use AI to build a bill calendar, catch due dates, and review subscriptions — while you keep every payment in your own hands. Copy-paste prompts included.">
+<meta name="twitter:image" content="https://fieldguidetobots.com/assets/cover-the-bills-helper.jpg">
+<meta name="twitter:image:alt" content="Cover of The Bills Helper field guide">
+<link rel="stylesheet" href="/css/fgb-pages.css">
+<link rel="stylesheet" href="/assets/share.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Keep Track of Bills with AI (Without Letting It Pay Anything)",
+  "description": "Use AI to build a bill calendar, catch due dates, and review subscriptions \u2014 while you keep every payment in your own hands. Copy-paste prompts included.",
+  "image": "https://fieldguidetobots.com/assets/cover-the-bills-helper.jpg",
+  "datePublished": "2026-11-20",
+  "dateModified": "2026-11-20",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Person",
+    "@id": "https://fieldguidetobots.com/#traci",
+    "name": "Traci Anderson",
+    "url": "https://fieldguidetobots.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://fieldguidetobots.com/#organization",
+    "name": "Happy Place Ink",
+    "url": "https://fieldguidetobots.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fieldguidetobots.com/assets/logo-badge.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fieldguidetobots.com/blog/how-to-keep-track-of-bills-with-ai/"
+  },
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://fieldguidetobots.com/blog/#blog",
+    "name": "Field Guide to Bots Blog"
+  },
+  "keywords": "how to use ChatGPT to organize bills"
+}
+</script>
+
+</head>
+
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/monogram-fgb.png" alt="" width="38" height="38">Field Guide to Bots</a>
+    <nav aria-label="Site">
+      <a href="/#start">Start here</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/#templates">Bot templates</a>
+      <a href="/free/">Free prompts</a>
+      <a href="/tiktok/">TikTok</a>
+    </nav>
+    
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
+
+  </div>
+</header>
+<main>
+  <article class="article" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="article-wrap">
+      <p class="crumbs"><a href="https://fieldguidetobots.com/">Home</a> · <a href="/blog/">Blog</a> · Bills &amp; due dates</p>
+      <p class="kicker" style="text-align:left">Bills &amp; due dates</p>
+      <h1 itemprop="headline">How to Keep Track of Bills with AI (Without Letting It Pay Anything)</h1>
+      <p class="byline">By <b>Traci Anderson</b> · <time datetime="2026-11-20" itemprop="datePublished">November 20, 2026</time></p>
+      <div class="share-bar"></div>
+      <p>Late fees are usually a due date that lived in a portal, an email, or a pile of mail, and never made it onto a list I look at. I don't want a bot that pays my bills. I want one that helps me see what's due, what's repeating, and what I should look at before it renews.</p>
+<p>An AI helper is good at turning a messy list into a calendar. It should not get your bank login, and it should not press pay.</p>
+<p>These prompts work in ChatGPT or any similar chatbot. This is organizing help, not financial advice. You still pay everything yourself.</p>
+<h2 id="put-the-safety-rules-at-the-top">Put the safety rules at the top</h2>
+<p>I paste this first so the chat doesn't offer to pay or cancel for me.</p>
+<div class="prompt" id="prompt-1"><div class="bar"><span>Copy-paste prompt 1</span><button type="button">Copy prompt</button></div><pre><code>You're my bills-and-due-dates helper. Your job is to list, sort, and remind me. You never pay, schedule a payment, cancel, downgrade, dispute, or contact a company. If I ask you to do one of those things, remind me I do it myself.
+
+Never ask for or store passwords, full account numbers, routing numbers, Social Security numbers, or one-time codes. If I paste a number that looks like an account or card number, tell me to delete it and refer to it only by the last 4 digits.
+
+If a charge looks unfamiliar, flag it for me to check. Don't tell me it's safe or a scam. I'll verify it myself.</code></pre></div>
+<p>If you use a bank or card export, copy only the date, the merchant name, and the amount into the chat. Leave the rest off the page.</p>
+<h2 id="build-a-tracker-from-the-list-you-already-have">Build a tracker from the list you already have</h2>
+<p>You don't need a perfect spreadsheet to start. A list in your own words is enough: the bill, the usual amount, the due date, and how you pay it.</p>
+<div class="prompt" id="prompt-2"><div class="bar"><span>Copy-paste prompt 2</span><button type="button">Copy prompt</button></div><pre><code>Here are my recurring bills and subscriptions, in my own words:
+[Name — usual amount or a range — due day or "I don't know" — autopay or I pay it — account ending in 1234 if I want a reminder]
+
+Make a bill tracker as a table with these columns: name, usual amount, how often (monthly / quarterly / yearly / not sure), due day if I gave one, how I pay, and a "check this" note if anything is missing.
+
+Then give me a month-at-a-glance for [this month / next month]: each bill under the week it is due, plus a total for the month. If I didn't give a due day, list it at the bottom as "date needed" — don't guess a date.</code></pre></div>
+<p>If you only know some of the dates, that's fine. Look those up on a statement or the company's account page, then tell the bot the real due day.</p>
+<h2 id="use-a-redacted-statement-to-catch-what-you-forgot">Use a redacted statement to catch what you forgot</h2>
+<p>The bills we forget are often the quiet ones: an annual charge, a trial that ended, a subscription under a name you don't recognize. To spot those, paste a few months of redacted transactions — date, merchant, amount only.</p>
+<div class="prompt" id="prompt-3"><div class="bar"><span>Copy-paste prompt 3</span><button type="button">Copy prompt</button></div><pre><code>I'm going to paste transactions from my bank or card, with account numbers removed. Each line is date, merchant, amount.
+
+Please:
+1) List anything that looks like a recurring bill or subscription, with the amount and how often it seems to repeat.
+2) Put one-time or unclear charges in a "check with me" list. Don't guess.
+3) Flag anything that looks like a trial, a renewal, or a price that changed, and tell me why you flagged it.
+4) Do not repeat any full account numbers if I accidentally left one in.
+
+Don't contact anyone. Don't tell me to cancel yet — just show me the list so I can decide.</code></pre></div>
+<p>Confirm every recurring item yourself. Merchant names can be cryptic, and a charge that showed up once might be annual.</p>
+<h2 id="review-subscriptions-then-you-make-the-call">Review subscriptions — then you make the call</h2>
+<p>A good list often shows things you forgot you were still paying for. I use a second prompt to sort them, then I cancel in the company's own account or app.</p>
+<div class="prompt" id="prompt-4"><div class="bar"><span>Copy-paste prompt 4</span><button type="button">Copy prompt</button></div><pre><code>From the tracker, make a subscription review.
+
+Group them as: keep, look at more closely, or "I may not use this." For the look-at and may-not-use groups, give me one question to answer (Do I still use this? Is there a cheaper plan I already know about?) and the next step I would take myself, like "log in and check the renewal date."
+
+Don't draft cancellation emails unless I ask, and even then, I'll send them. Don't call anything a waste.</code></pre></div>
+<p>If you do decide to cancel, do it through the official channel and mark the date on your tracker. Deleting an app is not the same as canceling.</p>
+<h2 id="turn-the-list-into-reminders-you-control">Turn the list into reminders you control</h2>
+<p>A tracker only helps if you see it before the due date. I ask the bot for a reminder list I can copy into my phone calendar.</p>
+<div class="prompt" id="prompt-5"><div class="bar"><span>Copy-paste prompt 5</span><button type="button">Copy prompt</button></div><pre><code>Using the tracker, make a reminder list I can copy into my own calendar.
+
+For each bill I pay myself, remind me [3] days before the due date (or the business day before, if that matters for [rent / a transfer that takes time]). For autopay bills, remind me [3] days before so I can check that the money will be there and the amount looks normal.
+
+Format each line as: date to remind me, bill name, usual amount, how I pay, due date. Then give me a 10-minute monthly checklist I can do on the [1st]: look at the upcoming month, update any amounts that changed, and mark anything unfamiliar.
+
+I will add these reminders myself. Don't create calendar events or send email unless I ask and then approve each one.</code></pre></div>
+<p>Set the reminders on your phone or calendar. If a tool offers to add them, read each one before you say yes.</p>
+<div class="safer" id="safer-setup"><h2>Safer setup</h2>
+<p>Never paste full card numbers, bank logins, routing numbers, Social Security numbers, or one-time codes into a chat. Last 4 digits are enough if you need to tell two accounts apart.</p>
+<p>The helper lists and reminds. You pay, cancel, dispute, and call the company. If a charge looks wrong, check it on the official statement or with the bank — not with a chatbot's guess.</p>
+<p>This is a way to see your due dates more clearly. It isn't financial advice, and it isn't a promise you won't get a late fee.</p>
+</div>
+<h2 id="if-you-want-a-full-bills-setup-or-a-payoff-plan-next">If you want a full bills setup — or a payoff plan next</h2>
+<p>I wrote <a href="https://traciwithani.gumroad.com/l/tqfnu" target="_blank" rel="noopener">The Bills Helper</a> ($12) as a short guide for due dates, subscription checks, and reminders: the bot lists what's due, and you pay everything yourself.</p>
+<p>If you also want a calm payoff plan, that's <a href="https://traciwithani.gumroad.com/l/uydufw" target="_blank" rel="noopener">Paying Off Debt</a> ($12): list balances, compare snowball and avalanche, and approve the drafts. It's a planning guide, not financial advice. The two together are <a href="https://traciwithani.gumroad.com/l/wsnfdc" target="_blank" rel="noopener">The Money Pair</a> ($20).</p>
+<p>For a smaller start, the free guide <a href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">10 Copy-Paste AI Prompts to Run Your Day</a> has a bills-and-renewals prompt. Pay what you want; $0 is fine.</p>
+      
+<div class="ctabox">
+  <p class="kicker" style="text-align:left">The matching guide</p>
+  <h2>The Bills Helper</h2>
+  <p>If you want the full setup, the 7-day plan, and more copy-paste prompts for this kind of day, that's in the guide. The bot still drafts. You still approve.</p>
+  <div class="btns">
+    <a class="btn btn-orange" href="https://traciwithani.gumroad.com/l/tqfnu" target="_blank" rel="noopener">Get The Bills Helper · $12</a>
+    <a class="btn btn-ghost" href="/free/">Or start with the free prompts</a>
+  </div>
+</div>
+
+      <div class="share-bar"></div>
+      <nav class="related" aria-label="More tips">
+        <h2>More tips</h2>
+        <ul><li><a href="/blog/how-to-use-ai-for-etsy-listings/"><span>Etsy &amp; shop tips</span>How to Use AI for Etsy Listings Without Sounding Generic</a></li><li><a href="/blog/how-to-meal-plan-with-ai/"><span>Family &amp; meals</span>How to Meal Plan with AI When You're Tired of "What's for Dinner?</a></li><li><a href="/blog/ai-daily-planner-for-adhd/"><span>ADHD &amp; planning</span>How to Use AI as a Daily Planner When You Have ADHD</a></li></ul>
+      </nav>
+    </div>
+  </article>
+</main>
+<footer>
+  <div class="wrap">
+    <img class="fgb" src="/assets/monogram-fgb.png" alt="FGB monogram">
+    
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
+
+    
+    <div class="links">
+      <a href="https://fieldguidetobots.com/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/free/">Free prompts</a>
+      <a href="https://fieldguidetobots.com/#guides">Guides</a>
+      <a href="/tiktok/">TikTok</a>
+      <a href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">Free guide on Gumroad</a>
+      <a href="https://happyplaceinkandart.etsy.com" target="_blank" rel="noopener">Happy Place Ink on Etsy</a>
+    </div>
+
+    
+    <p><b>Made with AI help.</b> These pages were written and designed with AI tools, then checked and edited by a real person at Happy Place Ink.</p>
+    <p>Field Guide to Bots is an independent series by Happy Place Ink. It's not an official xAI or Grok product and isn't endorsed by them. Results depend on you. No income or results are promised. Planning help in these posts is not medical, legal, or financial advice.</p>
+    <p>© 2026 Happy Place Ink · fieldguidetobots.com</p>
+
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".prompt").forEach(function(box){
+  var btn = box.querySelector("button");
+  if(!btn) return;
+  btn.addEventListener("click", function(){
+    var text = box.querySelector("pre").innerText;
+    navigator.clipboard.writeText(text).then(function(){
+      btn.textContent = "Copied";
+      setTimeout(function(){ btn.textContent = "Copy prompt"; }, 1600);
+    });
+  });
+});
+</script>
+
+<script src="/assets/share.js" defer></script>
+</body>
+</html>
