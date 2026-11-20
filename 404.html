@@ -18,9 +18,16 @@
 body{margin:0;min-height:100vh;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55;display:flex;flex-direction:column}
 .top{background:var(--green);color:var(--cream)}
 .wrap{max-width:640px;margin:0 auto;padding:0 20px}
-.top .wrap{display:flex;align-items:center;height:60px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;color:var(--cream);text-decoration:none;font-family:var(--serif);font-weight:900;font-size:19px}
 .brand img{width:38px;height:38px;border-radius:50%;background:var(--cream)}
+.socials{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:0 0 14px}
+.socials a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:2px solid rgba(254,247,229,.4);color:var(--cream);text-decoration:none}
+.socials a:hover,.socials a:focus-visible{background:#2E5A43;border-color:var(--cream);color:var(--cream);outline:none}
+.socials svg{width:20px;height:20px;fill:currentColor;display:block}
+.top .socials{margin:0;gap:6px;flex:none}
+.top .socials a{width:34px;height:34px}
+@media (max-width:520px){.top .socials{display:none}}
 main{flex:1;display:flex;align-items:center;padding:56px 0;text-align:center}
 h1{font-family:var(--serif);font-weight:900;color:var(--green);font-size:clamp(32px,7vw,48px);line-height:1.1;margin:16px 0 12px}
 p{color:var(--muted);margin:0 0 24px}
@@ -35,6 +42,12 @@ footer a{color:var(--cream);font-weight:800}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><img src="assets/monogram-fgb.png" alt="" width="38" height="38">Field Guide to Bots</a>
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
   </div>
 </header>
 <main>
@@ -45,6 +58,14 @@ footer a{color:var(--cream);font-weight:800}
     <a class="btn" href="/">Back to Field Guide to Bots</a>
   </div>
 </main>
-<footer>© 2026 Happy Place Ink · <a href="/">fieldguidetobots.com</a></footer>
+<footer>
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
+  © 2026 Happy Place Ink · <a href="/">fieldguidetobots.com</a>
+</footer>
 </body>
 </html>
