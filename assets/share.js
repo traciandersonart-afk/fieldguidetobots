@@ -1,12 +1,15 @@
 /**
  * Field Guide to Bots share bar.
- * Looks for .share-bar on the page. If the bar is empty, it fills in
- * Pinterest, Facebook, X, Copy link (for Instagram/TikTok), and a
- * native Share button when the Web Share API is available.
+ * Drop in:
+ *   <link rel="stylesheet" href="/assets/share.css">
+ *   <div class="share-bar"></div>
+ *   <script src="/assets/share.js" defer></script>
  *
- * Optional data attributes: data-share-url, data-share-title,
- * data-share-description, data-share-image. Otherwise uses the
- * canonical URL and Open Graph tags.
+ * Optional data attributes on .share-bar: data-share-url, data-share-title,
+ * data-share-description, data-share-image. Otherwise uses the canonical
+ * URL and Open Graph tags (og:title, og:description, og:image).
+ *
+ * No third-party scripts or trackers.
  */
 (function () {
   "use strict";
@@ -35,9 +38,10 @@
   }
 
   function pinterestHref(ctx) {
-    var href = "https://www.pinterest.com/pin/create/button/?url=" + enc(ctx.url) + "&description=" + enc(ctx.title);
-    if (ctx.image) href += "&media=" + enc(ctx.image);
-    return href;
+    var desc = ctx.description ? ctx.title + " — " + ctx.description : ctx.title;
+    return "https://www.pinterest.com/pin/create/button/?url=" + enc(ctx.url) +
+      "&media=" + enc(ctx.image) +
+      "&description=" + enc(desc);
   }
 
   function facebookHref(ctx) {
@@ -45,8 +49,7 @@
   }
 
   function xHref(ctx) {
-    var text = ctx.title || "";
-    return "https://twitter.com/intent/tweet?url=" + enc(ctx.url) + "&text=" + enc(text);
+    return "https://x.com/intent/post?url=" + enc(ctx.url) + "&text=" + enc(ctx.title || "");
   }
 
   function svg(path) {
@@ -58,7 +61,7 @@
     facebook: "M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z",
     x: "M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z",
     copy: "M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h11v14z",
-    native: "M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .54 1.7L8.7 9.24a3 3 0 1 0 0 5.52l6.84 3.54A3 3 0 1 0 16.9 16.7L10.06 13.16a3.06 3.06 0 0 0 0-2.32L16.9 7.3A3 3 0 0 0 18 8z",
+    native: "M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .54 1.7L8.7 9.24a3 3 0 1 0 0 5.52l6.84 3.54A3 3 0 1 0 16.9 16.7L10.06 13.16a3.06 3.06 0 0 0 0-2.32L16.9 7.3A3 3 0 0 0 18 8z"
   };
 
   function makeLink(className, label, href, icon) {
@@ -67,15 +70,16 @@
     a.href = href;
     a.target = "_blank";
     a.rel = "noopener noreferrer";
+    a.setAttribute("aria-label", "Share on " + label);
     a.innerHTML = svg(icon) + "<span>" + label + "</span>";
     return a;
   }
 
-  function makeButton(className, label, icon, attr) {
+  function makeButton(className, label, icon, dataAttr) {
     var b = document.createElement("button");
     b.type = "button";
     b.className = "share-btn " + className;
-    b.setAttribute(attr, "true");
+    b.setAttribute(dataAttr, "");
     b.innerHTML = svg(icon) + "<span>" + label + "</span>";
     return b;
   }
@@ -95,9 +99,11 @@
     actions.appendChild(makeLink("share-facebook", "Facebook", facebookHref(ctx), ICONS.facebook));
     actions.appendChild(makeLink("share-x", "X", xHref(ctx), ICONS.x));
     var copy = makeButton("share-copy", "Copy link", ICONS.copy, "data-share-copy");
-    copy.setAttribute("aria-label", "Copy link to share on Instagram or TikTok");
+    copy.setAttribute("aria-label", "Copy link for Instagram or TikTok");
+    copy.setAttribute("title", "Copy link for Instagram or TikTok");
     actions.appendChild(copy);
     var native = makeButton("share-native", "Share", ICONS.native, "data-share-native");
+    native.setAttribute("aria-label", "Share this page");
     native.hidden = true;
     actions.appendChild(native);
     bar.appendChild(actions);
@@ -118,11 +124,11 @@
     function fail() { setCopied(btn, false); }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(url).then(ok).catch(function () {
-        window.prompt("Copy this link:", url);
+        window.prompt("Copy this link for Instagram or TikTok:", url);
         ok();
       });
     } else {
-      window.prompt("Copy this link:", url);
+      window.prompt("Copy this link for Instagram or TikTok:", url);
       ok();
     }
   }
@@ -130,8 +136,7 @@
   function onNative(bar) {
     var ctx = context(bar);
     if (!navigator.share) return;
-    var payload = { title: ctx.title, text: ctx.description || ctx.title, url: ctx.url };
-    navigator.share(payload).catch(function () {});
+    navigator.share({ title: ctx.title, text: ctx.description || ctx.title, url: ctx.url }).catch(function () {});
   }
 
   function enhance(bar) {
