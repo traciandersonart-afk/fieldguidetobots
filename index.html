@@ -52,7 +52,11 @@
       "sameAs": [
         "https://happyplaceinkandart.etsy.com",
         "https://traciwithani.gumroad.com",
-        "https://linktr.ee/happyplaceink"
+        "https://linktr.ee/happyplaceink",
+        "https://www.tiktok.com/@fieldguidetobots",
+        "https://www.instagram.com/happyplaceinkandart/",
+        "https://www.facebook.com/happyplaceink",
+        "https://x.com/iamtraciwithani"
       ]
     },
     {
@@ -322,7 +326,17 @@ section{padding:56px 0}
 .top nav{display:flex;gap:18px}
 .top nav a{color:var(--cream);text-decoration:none;font-weight:800;font-size:15px}
 .top nav a:hover{color:#F3B27A}
+.top nav a[aria-current="page"]{color:#F3B27A}
+@media (max-width:720px){.top nav{gap:12px}.top nav a{font-size:14px}}
 @media (max-width:640px){.top nav{display:none}}
+/* social icons */
+.socials{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:16px 0 8px}
+.socials a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:2px solid rgba(254,247,229,.4);color:var(--cream);text-decoration:none}
+.socials a:hover,.socials a:focus-visible{background:var(--green-mid);border-color:var(--cream);color:var(--cream);outline:none}
+.socials svg{width:20px;height:20px;fill:currentColor;display:block}
+.top .socials{margin:0;gap:6px;flex:none}
+.top .socials a{width:34px;height:34px}
+@media (min-width:641px) and (max-width:900px){.top .socials{display:none}}
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:12px 22px;border-radius:999px;font-weight:800;font-size:17px;text-decoration:none;border:3px solid var(--green);transition:transform .1s}
 .btn:active{transform:scale(.98)}
@@ -424,7 +438,14 @@ footer p{max-width:680px;margin:8px auto}
       <a href="#guides">Guides</a>
       <a href="#templates">Bot templates</a>
       <a href="#free">Free guide</a>
+      <a href="/tiktok/">TikTok</a>
     </nav>
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
   </div>
 </header>
 
@@ -648,6 +669,12 @@ footer p{max-width:680px;margin:8px auto}
 <footer>
   <div class="wrap">
     <img class="fgb" src="assets/monogram-fgb.png" alt="FGB monogram">
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
     <div class="links">
       <a href="https://happyplaceinkandart.etsy.com" target="_blank" rel="noopener">Happy Place Ink art shop on Etsy</a>
       <a href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">Free guide</a>
