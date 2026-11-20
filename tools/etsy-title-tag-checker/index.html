@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etsy title and tag checker · Field Guide to Bots</title>
+<meta name="description" content="Free Etsy title and tag checker: 140-character titles, 13 tags, 20-character tag limit, with live counts. Catch long tags and repeats before you paste.">
+<meta name="author" content="Traci Anderson">
+<meta name="theme-color" content="#173E2B">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fieldguidetobots.com/tools/etsy-title-tag-checker/">
+<link rel="icon" type="image/png" href="https://fieldguidetobots.com/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://fieldguidetobots.com/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Field Guide to Bots">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fieldguidetobots.com/tools/etsy-title-tag-checker/">
+<meta property="og:title" content="Etsy title and tag checker · Field Guide to Bots">
+<meta property="og:description" content="Free Etsy title and tag checker: 140-character titles, 13 tags, 20-character tag limit, with live counts. Catch long tags and repeats before you paste.">
+<meta property="og:image" content="https://fieldguidetobots.com/assets/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Field Guide to Bots: independent, plain-English guides to AI helper bots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Etsy title and tag checker · Field Guide to Bots">
+<meta name="twitter:description" content="Free Etsy title and tag checker: 140-character titles, 13 tags, 20-character tag limit, with live counts. Catch long tags and repeats before you paste.">
+<meta name="twitter:image" content="https://fieldguidetobots.com/assets/og-image.jpg">
+<meta name="twitter:image:alt" content="Field Guide to Bots: independent, plain-English guides to AI helper bots">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Etsy title and tag checker",
+  "url": "https://fieldguidetobots.com/tools/etsy-title-tag-checker/",
+  "description": "Free Etsy title and tag checker: 140-character titles, 13 tags, 20-character tag limit, with live counts. Catch long tags and repeats before you paste.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Field Guide to Bots",
+    "url": "https://fieldguidetobots.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Happy Place Ink",
+    "url": "https://fieldguidetobots.com/"
+  }
+}
+</script>
+<style>
+@font-face{font-family:"Fraunces FGB";src:url(/assets/fonts/Fraunces-Display.ttf) format("truetype");font-weight:900;font-display:swap}
+@font-face{font-family:"Fraunces FGB";src:url(/assets/fonts/Fraunces-DisplayItalic.ttf) format("truetype");font-weight:900;font-style:italic;font-display:swap}
+@font-face{font-family:"Nunito FGB";src:url(/assets/fonts/Nunito-Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Nunito FGB";src:url(/assets/fonts/Nunito-Semibold.ttf) format("truetype");font-weight:600;font-display:swap}
+@font-face{font-family:"Nunito FGB";src:url(/assets/fonts/Nunito-ExtraBold.ttf) format("truetype");font-weight:800;font-display:swap}
+:root{--green:#173E2B;--green-mid:#2E5A43;--orange:#D2762A;--orange-text:#A9581B;--cream:#FEF7E5;--ink:#1F2B25;--muted:#5A6A60;--sage:#EEF0E2;--line:#DCD3B8;--serif:"Fraunces FGB",Georgia,"Times New Roman",serif;--sans:"Nunito FGB","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.55}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--green)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:900;color:var(--green);line-height:1.1;margin:0}
+h2{font-size:clamp(28px,5.6vw,40px)}
+.kicker{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--orange-text);margin:0 0 8px}
+.lede{color:var(--muted);max-width:640px;margin:12px 0 0}
+.center .kicker,.center h1,.center h2,.center .lede,.center .pine{text-align:center;margin-left:auto;margin-right:auto}
+section{padding:48px 0}
+.pine{display:flex;align-items:center;justify-content:center;gap:10px;margin:14px auto 0}
+.pine:before,.pine:after{content:"";height:3px;width:56px;background:var(--orange);border-radius:2px}
+.pine svg{width:18px;height:22px;fill:var(--green)}
+.top{background:var(--green);color:var(--cream);position:sticky;top:0;z-index:5}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;min-height:60px;gap:12px;flex-wrap:wrap;padding:8px 20px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--cream);text-decoration:none;font-family:var(--serif);font-weight:900;font-size:18px;white-space:nowrap}
+.brand img{width:38px;height:38px;border-radius:50%;background:var(--cream)}
+.top nav{display:flex;flex-wrap:wrap;gap:10px 16px}
+.top nav a{color:var(--cream);text-decoration:none;font-weight:800;font-size:15px}
+.top nav a:hover,.top nav a:focus-visible{color:#F3B27A;outline:none}
+.top nav a[aria-current="page"]{color:#F3B27A}
+.socials{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin:16px 0 8px}
+.socials a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;border:2px solid rgba(254,247,229,.4);color:var(--cream);text-decoration:none}
+.socials a:hover,.socials a:focus-visible{background:var(--green-mid);border-color:var(--cream);color:var(--cream);outline:none}
+.socials svg{width:20px;height:20px;fill:currentColor;display:block}
+.top .socials{margin:0;gap:6px;flex:none}
+.top .socials a{width:34px;height:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:12px 22px;border-radius:999px;font-weight:800;font-size:17px;text-decoration:none;border:3px solid var(--green);transition:transform .1s;font-family:var(--sans);cursor:pointer;background:transparent;color:var(--green)}
+.btn:active{transform:scale(.98)}
+.btn-orange{background:var(--orange);border-color:var(--orange);color:#fff}
+.btn-orange:hover{background:#BC6520;border-color:#BC6520}
+.btn-green{background:var(--green);color:var(--cream)}
+.btn-green:hover{background:var(--green-mid);border-color:var(--green-mid)}
+.btn-ghost{background:transparent;color:var(--green)}
+.btn-ghost:hover{background:var(--sage)}
+.btn-small{min-height:40px;padding:8px 14px;font-size:15px}
+.hero{padding:28px 0 36px;border-bottom:6px solid var(--green)}
+.hero .badge{width:min(160px,40vw);margin:0 auto 8px}
+.hero h1{font-size:clamp(32px,8vw,56px);margin-top:8px}
+.hero .promise{font-family:var(--serif);font-style:italic;font-weight:900;color:var(--orange-text);font-size:clamp(20px,4.4vw,26px);margin:10px auto 0;max-width:680px;line-height:1.25}
+.hero .sub{color:var(--muted);max-width:620px;margin:14px auto 0}
+.hero.center{text-align:center}
+.ctas{display:flex;flex-direction:column;gap:12px;max-width:360px;margin:24px auto 0}
+@media (min-width:700px){.ctas{flex-direction:row;max-width:none;justify-content:center}}
+.crumbs{font-size:14px;font-weight:700;color:var(--muted);margin:0 0 16px}
+.crumbs a{color:var(--green);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.cards{display:grid;gap:22px;margin-top:30px}
+@media (min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:2px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;color:inherit;text-decoration:none}
+a.card:hover{border-color:var(--green)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-bottom:2px solid var(--line);background:var(--sage)}
+.card .body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.card .for{font-weight:800;font-size:12px;letter-spacing:.14em;color:var(--orange-text);text-transform:uppercase}
+.card h3{font-size:clamp(22px,3vw,27px);margin:6px 0 8px}
+.card p{margin:0 0 16px;flex:1;color:var(--ink)}
+.card .soon{display:inline-block;margin-top:8px;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-text)}
+.note{background:var(--sage);border-left:6px solid var(--green);border-radius:10px;padding:14px 18px;margin:22px 0 0;font-size:16px}
+.note.warn{border-left-color:var(--orange)}
+.signup-box{background:var(--cream);border:4px solid var(--green);border-radius:22px;padding:26px 22px;max-width:900px;margin:0 auto;box-shadow:0 0 0 6px var(--cream),0 0 0 8px var(--orange)}
+.signup-box h2{font-size:clamp(26px,5vw,34px);margin:6px 0 10px}
+.signup-box p{margin:0 0 16px}
+.signup-box .tag{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px;color:var(--orange-text)}
+.signup-box .small{font-size:15px;color:var(--muted);margin:10px 0 0}
+.freeband{background:var(--sage);border-top:2px solid var(--line);border-bottom:2px solid var(--line)}
+.prompt{margin:18px 0 26px;background:#fff;border:2px solid var(--line);border-radius:16px;overflow:hidden}
+.prompt .bar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--sage);border-bottom:2px solid var(--line);padding:8px 12px}
+.prompt .bar span{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-text)}
+.prompt pre{margin:0;padding:16px 18px;white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;line-height:1.55;color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.tpl-meta{display:flex;flex-wrap:wrap;gap:14px 28px;margin:18px 0 0;font-size:16px}
+.tpl-meta b{color:var(--green)}
+footer{background:var(--green);color:#D9DFD3;padding:36px 0 40px;font-size:15px;text-align:center}
+footer .fgb{width:64px;height:64px;border-radius:50%;background:var(--cream);margin:0 auto 12px}
+footer a{color:var(--cream);font-weight:800}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin:8px 0 18px}
+footer p{max-width:680px;margin:8px auto}
+/* forms / tools */
+label{display:block;font-weight:800;font-size:15px;margin:0 0 6px;color:var(--green)}
+input[type="text"],input[type="number"],input[type="search"],select,textarea{width:100%;font-family:var(--sans);font-size:16px;line-height:1.4;padding:12px 14px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--orange);outline-offset:1px;border-color:var(--orange)}
+.row{display:grid;gap:12px;margin:0 0 12px}
+@media (min-width:700px){.row.cols-4{grid-template-columns:1.3fr 1fr 0.8fr 1fr auto}.row.cols-3{grid-template-columns:1.4fr 1fr 1.1fr auto}.row.cols-2{grid-template-columns:1fr 1fr}}
+.tool-card{background:#fff;border:2px solid var(--line);border-radius:18px;padding:18px}
+.debt-row,.sub-row{background:var(--sage);border-radius:14px;padding:14px;margin:0 0 12px}
+.row-actions{display:flex;align-items:end}
+.results{display:grid;gap:16px;margin-top:22px}
+@media (min-width:800px){.results{grid-template-columns:1fr 1fr}}
+.result{background:#fff;border:2px solid var(--line);border-radius:18px;padding:20px}
+.result h3{margin:0 0 10px;font-size:26px}
+.result .stat{font-family:var(--serif);font-weight:900;font-size:clamp(28px,5vw,36px);color:var(--green);margin:0}
+.result .stat-label{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.result ul{margin:12px 0 0;padding-left:1.2em}
+.winner{border-color:var(--green);box-shadow:0 0 0 3px rgba(23,62,43,.12)}
+.counts{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 14px}
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--sage);border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px}
+.pill.over,.field-over{color:#8B2E12;background:#F8E0D2}
+.pill.ok{color:var(--green)}
+.tag-list{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.tag-chip{background:#fff;border:2px solid var(--line);border-radius:999px;padding:6px 12px;font-weight:700;font-size:14px}
+.tag-chip.over{border-color:#8B2E12;color:#8B2E12}
+.tag-chip.dup{border-color:var(--orange);color:var(--orange-text)}
+.preview-box{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px;min-height:8em}
+.menu-grid{display:grid;gap:14px}
+@media (min-width:800px){.menu-grid{grid-template-columns:1fr 1fr}}
+.menu-col{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px;min-height:160px}
+.menu-col h3{font-size:22px;margin:0 0 10px}
+.menu-col ul{list-style:none;margin:0;padding:0}
+.menu-col li{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}
+.menu-col li:last-child{border-bottom:0}
+.blank{color:var(--muted);font-style:italic}
+.totals{display:flex;flex-wrap:wrap;gap:18px;margin-top:16px}
+.totals .stat{font-size:clamp(32px,6vw,44px)}
+@media (max-width:700px){
+  .row-actions{align-items:stretch}
+  .row-actions .btn{width:100%}
+  .top nav{width:100%;order:3;padding:2px 0 4px;gap:8px 14px}
+  .top .socials{display:none}
+}
+@media print{
+  body{background:#fff;font-size:14px}
+  .top,footer,.freeband,.no-print,.crumbs,.ctas,.actions{display:none !important}
+  .hero{border:0;padding:0 0 12px}
+  .menu-col{break-inside:avoid}
+}
+/* signup box — match /free/ draft (blog-drafts/site/css/fgb-pages.css) */
+.freecard{display:grid;gap:24px;align-items:center;background:var(--cream);border:4px solid var(--green);border-radius:22px;padding:26px 22px;max-width:900px;margin:0 auto;box-shadow:0 0 0 6px var(--cream),0 0 0 8px var(--orange)}
+@media (min-width:780px){.freecard{grid-template-columns:1.15fr 1fr;padding:34px}}
+.freecard .tag{display:inline-block;background:var(--orange);color:#fff;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.freecard h2{text-align:left;font-size:clamp(26px,5vw,34px);margin-top:12px}
+.freecard .price{font-weight:800;color:var(--orange-text);margin:8px 0 14px}
+.freecard ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.freecard li{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 14px;font-weight:600;display:flex;gap:10px;align-items:center}
+.freecard li:before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--green);color:var(--cream);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.signup{background:#fff;border:2px solid var(--line);border-radius:18px;padding:22px 20px;height:100%}
+.signup h3{font-size:24px;margin-bottom:8px}
+.signup .btn{width:100%;margin-top:14px}
+.signup .small{font-size:15px;color:var(--muted);margin:10px 0 0}
+.signup a.inline{font-weight:800}
+/* share bar */
+.share-bar{margin:22px 0 0}
+.share-bar .share-label{font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-text);margin:0 0 10px}
+.share-actions{display:flex;flex-wrap:wrap;gap:8px}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 14px;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--green);font-family:var(--sans);font-weight:800;font-size:14px;text-decoration:none;cursor:pointer}
+.share-btn:hover,.share-btn:focus-visible{border-color:var(--green);background:var(--sage);outline:none}
+.share-btn svg{flex:none;display:block}
+@media print{.share-bar{display:none !important}}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/monogram-fgb.png" alt="" width="38" height="38">Field Guide to Bots</a>
+    <nav aria-label="Site">
+      <a href="/">Home</a>
+      <a href="/#guides">Guides</a>
+      <a href="/templates/">Templates</a>
+      <a href="/tools/" aria-current="page">Tools</a>
+      <a href="/free/">Free guide</a>
+    </nav>
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="crumbs"><a href="/">Home</a> · <a href="/tools/">Tools</a> · Etsy title and tag checker</p>
+      <p class="kicker">Free checker</p>
+      <h1>Etsy title and tag checker</h1>
+      <div class="pine" aria-hidden="true"><svg viewBox="0 0 18 22"><path d="M9 0 3 8h3l-5 7h5l-4 5h14l-4-5h5l-5-7h3z"/></svg></div>
+      <p class="promise">Count it before you paste: titles up to 140 characters, up to 13 tags, 20 characters each.</p>
+      <div class="share-bar" data-share></div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <form class="tool-card" onsubmit="return false">
+        <p>
+          <label for="etsy-title">Listing title</label>
+          <input type="text" id="etsy-title" maxlength="200" placeholder="Handmade ceramic mug, rustic speckled glaze, 12 oz coffee cup">
+        </p>
+        <p>
+          <label for="etsy-tags">Tags (one per line, or separated by commas)</label>
+          <textarea id="etsy-tags" rows="8" placeholder="ceramic mug&#10;coffee cup&#10;handmade pottery"></textarea>
+        </p>
+        <div id="etsy-out"></div>
+      </form>
+      <p style="margin-top:22px">Need a listing kit drafted for you? The <a href="https://traciwithani.gumroad.com/l/wwztcx" target="_blank" rel="noopener">Seller's Daily Helper guide</a> ($15) walks you through it. The ready-made seller template isn't posted yet, so if you want a bot to copy today, try the <a href="/templates/makers-back-office/">Maker's Back Office template</a>.</p>
+    </div>
+  </section>
+  <section class="freeband">
+    <div class="wrap"><aside class="freecard" id="free-prompts">
+        <div>
+          <span class="tag">Free starter guide</span>
+          <h2>Get the 10 free prompts</h2>
+          <p class="price">Pay what you want · $0 is fine</p>
+          <ul>
+          <li>Morning brief, meals, bills, your week, and your shop</li>
+          <li>Works in ChatGPT, Claude, Gemini, or a similar chatbot</li>
+          <li>Nothing sends, posts, or pays without your OK</li>
+          <li>Pay what you want — $0 is fine</li>
+          </ul>
+        </div>
+        <div class="signup">
+          <h3>Email signup</h3>
+          <p>The free guide is already on Gumroad. Open the landing page, or go straight to the download — enter your email, set the price to $0 if you want, and the PDF arrives in your inbox. No new account on this site.</p>
+          <a class="btn btn-orange" href="/free/">Get the 10 free prompts</a>
+          <p class="small">Or <a class="inline" href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">download on Gumroad</a>.</p>
+        </div>
+      </aside></div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <img class="fgb" src="/assets/monogram-fgb.png" alt="FGB monogram">
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/#guides">Guides</a>
+      <a href="/templates/">Templates</a>
+      <a href="/tools/">Tools</a>
+      <a href="/free/">Free guide</a>
+      <a href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">Free guide on Gumroad</a>
+      <a href="https://happyplaceinkandart.etsy.com" target="_blank" rel="noopener">Happy Place Ink art shop on Etsy</a>
+    </div>
+    <p><b>Made with AI help.</b> These guides were written and designed with AI tools, then checked and edited by a real person at Happy Place Ink.</p>
+    <p>Field Guide to Bots is an independent series by Happy Place Ink. It's not an official xAI or Grok product and isn't endorsed by them. Results depend on you. No income or results are promised.</p>
+    <p>© 2026 Happy Place Ink · fieldguidetobots.com</p>
+  </div>
+</footer>
+<script src="/assets/share.js" defer></script>
+<script>
+/**
+ * Etsy title and tag checker: 140-char title, up to 13 tags, 20 chars each.
+ */
+(function (root, factory) {
+  if (typeof module === "object" && module.exports) {
+    module.exports = factory();
+  } else {
+    root.EtsyChecker = factory();
+  }
+})(typeof globalThis !== "undefined" ? globalThis : this, function () {
+  "use strict";
+
+  var TITLE_MAX = 140;
+  var TAG_MAX = 20;
+  var TAG_LIMIT = 13;
+
+  function parseTags(raw) {
+    var parts = String(raw || "")
+      .split(/[\n,]+/)
+      .map(function (t) { return t.trim(); })
+      .filter(function (t) { return t.length > 0; });
+    return parts;
+  }
+
+  function uniqueKey(tag) {
+    return tag.toLowerCase();
+  }
+
+  function check(title, tagsRaw) {
+    var titleText = String(title || "");
+    var titleLen = titleText.length;
+    var tags = parseTags(tagsRaw);
+    var seen = {};
+    var details = tags.map(function (tag, i) {
+      var key = uniqueKey(tag);
+      var dup = !!seen[key];
+      seen[key] = true;
+      return {
+        tag: tag,
+        length: tag.length,
+        over: tag.length > TAG_MAX,
+        remaining: TAG_MAX - tag.length,
+        duplicate: dup,
+        index: i,
+      };
+    });
+    var overTags = details.filter(function (t) { return t.over; });
+    var dupTags = details.filter(function (t) { return t.duplicate; });
+    var emptyTitle = titleLen === 0;
+    return {
+      title: titleText,
+      titleLength: titleLen,
+      titleRemaining: TITLE_MAX - titleLen,
+      titleOver: titleLen > TITLE_MAX,
+      titleEmpty: emptyTitle,
+      tags: details,
+      tagCount: tags.length,
+      tagsRemaining: TAG_LIMIT - tags.length,
+      tagsOver: tags.length > TAG_LIMIT,
+      overTags: overTags,
+      dupTags: dupTags,
+      ok:
+        !emptyTitle &&
+        titleLen <= TITLE_MAX &&
+        tags.length > 0 &&
+        tags.length <= TAG_LIMIT &&
+        overTags.length === 0,
+    };
+  }
+
+  return {
+    TITLE_MAX: TITLE_MAX,
+    TAG_MAX: TAG_MAX,
+    TAG_LIMIT: TAG_LIMIT,
+    parseTags: parseTags,
+    check: check,
+  };
+});
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var title = document.getElementById("etsy-title");
+  var tags = document.getElementById("etsy-tags");
+  var out = document.getElementById("etsy-out");
+
+  function pill(text, cls) {
+    return '<span class="pill ' + cls + '">' + text + "</span>";
+  }
+
+  function render() {
+    var r = EtsyChecker.check(title.value, tags.value);
+    var tClass = r.titleOver ? "over" : "ok";
+    var gClass = r.tagsOver ? "over" : "ok";
+    var chips = r.tags.map(function (t) {
+      var cls = "tag-chip";
+      if (t.over) cls += " over";
+      if (t.duplicate) cls += " dup";
+      var extra = t.over ? " · " + t.length + " characters" : (t.duplicate ? " · repeated" : "");
+      return '<span class="' + cls + '">' + t.tag.replace(/&/g,"&amp;").replace(/</g,"&lt;") + extra + "</span>";
+    }).join("");
+    var notes = [];
+    if (r.titleEmpty) notes.push("Add a title.");
+    if (r.titleOver) notes.push("The title is " + (-r.titleRemaining) + " character" + (r.titleRemaining === -1 ? "" : "s") + " over the 140-character limit.");
+    if (r.tagCount === 0) notes.push("Add some tags. Etsy allows up to 13.");
+    if (r.tagsOver) notes.push("You have " + r.tagCount + " tags. Etsy allows 13.");
+    if (r.overTags.length) notes.push(r.overTags.length + " tag" + (r.overTags.length === 1 ? " is" : "s are") + " over 20 characters.");
+    if (r.dupTags.length) notes.push("Some tags are repeated. Etsy treats letter case as the same tag.");
+    if (r.ok && r.tagCount < 13) notes.push("Looking good. You still have room for " + r.tagsRemaining + " more tag" + (r.tagsRemaining === 1 ? "" : "s") + ".");
+    if (r.ok && r.tagCount === 13) notes.push("Nice — 13 tags, each within 20 characters, and the title fits.");
+    out.innerHTML = '<div class="counts">' +
+      pill("Title " + r.titleLength + " / 140", tClass) +
+      pill((r.titleOver ? r.titleRemaining + " over" : r.titleRemaining + " left"), tClass) +
+      pill("Tags " + r.tagCount + " / 13", gClass) +
+      "</div>" +
+      (chips ? '<div class="tag-list">' + chips + "</div>" : "") +
+      (notes.length ? "<ul>" + notes.map(function (n) { return "<li>" + n + "</li>"; }).join("") + "</ul>" : "");
+  }
+
+  title.addEventListener("input", render);
+  tags.addEventListener("input", render);
+  render();
+});
+</script>
+
+</body>
+</html>
