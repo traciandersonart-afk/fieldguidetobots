@@ -1,0 +1,10 @@
+/* Field Guide to Bots share bar. Include with /assets/share.js. No trackers. */
+.share-bar{margin:22px 0 0}
+.share-bar .share-label{font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-text,#A9581B);margin:0 0 10px;font-family:var(--sans,Nunito,system-ui,sans-serif)}
+.share-actions{display:flex;flex-wrap:wrap;gap:8px}
+.share-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 14px;border-radius:999px;border:2px solid var(--line,#DCD3B8);background:#fff;color:var(--green,#173E2B);font-family:var(--sans,Nunito,system-ui,sans-serif);font-weight:800;font-size:14px;text-decoration:none;cursor:pointer;line-height:1}
+.share-btn:hover,.share-btn:focus-visible{border-color:var(--green,#173E2B);background:var(--sage,#EEF0E2);outline:none}
+.share-btn svg{flex:none;display:block;fill:currentColor}
+.share-band{background:var(--sage,#EEF0E2);border-top:2px solid var(--line,#DCD3B8);padding:28px 0}
+.share-band .share-bar{margin:0 auto;max-width:720px;text-align:left}
+@media print{.share-bar{display:none !important}}
