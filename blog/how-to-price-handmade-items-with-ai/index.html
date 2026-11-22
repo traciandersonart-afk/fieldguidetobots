@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Price Handmade Items with AI (and Check the Math Yourself) · Field Guide to Bots</title>
+<meta name="description" content="Use AI to add up materials, time, packaging, and fees for one handmade piece, compare a direct price and a wholesale price, and find the items you&#x27;re underpricing. Copy-paste prompts included; you set every price.">
+<meta name="author" content="Traci Anderson">
+<meta name="theme-color" content="#173E2B">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fieldguidetobots.com/blog/how-to-price-handmade-items-with-ai/">
+<link rel="icon" type="image/png" href="https://fieldguidetobots.com/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://fieldguidetobots.com/assets/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Field Guide to Bots">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fieldguidetobots.com/blog/how-to-price-handmade-items-with-ai/">
+<meta property="og:title" content="How to Price Handmade Items with AI (and Check the Math Yourself) · Field Guide to Bots">
+<meta property="og:description" content="Use AI to add up materials, time, packaging, and fees for one handmade piece, compare a direct price and a wholesale price, and find the items you&#x27;re underpricing. Copy-paste prompts included; you set every price.">
+<meta property="og:image" content="https://fieldguidetobots.com/assets/cover-makers-back-office.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cover of The Maker&#x27;s Back Office field guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Price Handmade Items with AI (and Check the Math Yourself) · Field Guide to Bots">
+<meta name="twitter:description" content="Use AI to add up materials, time, packaging, and fees for one handmade piece, compare a direct price and a wholesale price, and find the items you&#x27;re underpricing. Copy-paste prompts included; you set every price.">
+<meta name="twitter:image" content="https://fieldguidetobots.com/assets/cover-makers-back-office.jpg">
+<meta name="twitter:image:alt" content="Cover of The Maker&#x27;s Back Office field guide">
+<link rel="stylesheet" href="/css/fgb-pages.css">
+<link rel="stylesheet" href="/assets/share.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Price Handmade Items with AI (and Check the Math Yourself)",
+  "description": "Use AI to add up materials, time, packaging, and fees for one handmade piece, compare a direct price and a wholesale price, and find the items you're underpricing. Copy-paste prompts included; you set every price.",
+  "image": "https://fieldguidetobots.com/assets/cover-makers-back-office.jpg",
+  "datePublished": "2026-11-22",
+  "dateModified": "2026-11-22",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Person",
+    "@id": "https://fieldguidetobots.com/#traci",
+    "name": "Traci Anderson",
+    "url": "https://fieldguidetobots.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://fieldguidetobots.com/#organization",
+    "name": "Happy Place Ink",
+    "url": "https://fieldguidetobots.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fieldguidetobots.com/assets/logo-badge.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://fieldguidetobots.com/blog/how-to-price-handmade-items-with-ai/"
+  },
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": "https://fieldguidetobots.com/blog/#blog",
+    "name": "Field Guide to Bots Blog"
+  },
+  "keywords": "how to price handmade items"
+}
+</script>
+
+</head>
+
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/monogram-fgb.png" alt="" width="38" height="38">Field Guide to Bots</a>
+    <nav aria-label="Site">
+      <a href="/#start">Start here</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/templates/">Bot templates</a>
+      <a href="/tools/">Tools</a>
+      <a href="/free/">Free prompts</a>
+      <a href="/tiktok/">TikTok</a>
+    </nav>
+    
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
+
+  </div>
+</header>
+<main>
+  <article class="article" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="article-wrap">
+      <p class="crumbs"><a href="https://fieldguidetobots.com/">Home</a> · <a href="/blog/">Blog</a> · Maker pricing</p>
+      <p class="kicker" style="text-align:left">Maker pricing</p>
+      <h1 itemprop="headline">How to Price Handmade Items with AI (and Check the Math Yourself)</h1>
+      <p class="byline">By <b>Traci Anderson</b> · <time datetime="2026-11-22" itemprop="datePublished">November 22, 2026</time></p>
+      <div class="share-bar"></div>
+      <p>For years I priced my art by vibes. I'd pick a number that felt polite and hope it worked out. With ADHD, "sit down and do the cost math" sounds simple and then never happens, because it's twelve tiny numbers and every one of them is on a different receipt.</p>
+<p>An AI helper is good at the boring part. It can add up materials, spread a pack of supplies across the pieces it makes, and show you what you actually earn per hour. It doesn't know your market or today's fees. You bring the real numbers. It does the adding. You pick the price.</p>
+<p>These prompts work in ChatGPT or any similar chatbot. This is planning help, not financial or tax advice. Nothing gets listed, changed, or sent without your OK.</p>
+<h2 id="set-the-rules-first">Set the rules first</h2>
+<p>Paste this before any numbers, so the helper knows its job.</p>
+<div class="prompt" id="prompt-1"><div class="bar"><span>Copy-paste prompt 1</span><button type="button">Copy prompt</button></div><pre><code>You're my pricing helper for a small handmade shop. Draft only: I set every price, change every listing, and send every quote myself.
+
+Use only the numbers I give you. If something is missing, put "check this" in that spot instead of guessing. Don't look up or assume marketplace fees; I'll give you the current ones.
+
+Show your math line by line so I can check it. Keep it short and plain. No hype, and no promises about sales.</code></pre></div>
+<p>Fees change, and bots love to quote an old number with total confidence. Pull current fees from your marketplace's own fee page.</p>
+<h2 id="figure-out-what-one-piece-really-costs">Figure out what one piece really costs</h2>
+<p>Pick one product, not the whole shop. Dig out the receipts. Rough is fine.</p>
+<div class="prompt" id="prompt-2"><div class="bar"><span>Copy-paste prompt 2</span><button type="button">Copy prompt</button></div><pre><code>Help me find the real cost of one [product].
+
+Materials (what I paid for the pack, and about how many pieces it makes):
+[Material — paid $___ for ___ — makes about ___ pieces]
+
+Packaging per order: [tissue, mailer, sticker, card, about $___]
+Time per piece, including making, photos, listing, and packing: about ___ minutes
+The hourly rate I want to pay myself: $___
+Monthly shop costs (software, tools, supplies I use up): about $___, and I sell about ___ pieces a month
+
+Make one table: each cost, how you worked it out, and the cost per piece. Total it. Then tell me the cost per piece if I leave my time out, so I can see the difference.</code></pre></div>
+<p>That last line was the eye-opener for me. When you leave your time out, the profit looks great. Put your hours back in and it can shrink a lot. That's not a reason to panic. It's the real number.</p>
+<p>Quick check: take one material, divide what you paid by how many pieces it makes, and see if the bot got the same answer. If a $12 pack makes 40 pieces, that's 30 cents a piece. If the bot's number is way off, ask it to redo that line.</p>
+<h2 id="compare-a-direct-price-and-a-wholesale-price">Compare a direct price and a wholesale price</h2>
+<p>If you sell direct and also want shops to carry your work, you need two numbers. A common rule of thumb is cost times two for wholesale, and wholesale times two for retail. It's not a law, but it shows fast whether a shop could ever stock you.</p>
+<div class="prompt" id="prompt-3"><div class="bar"><span>Copy-paste prompt 3</span><button type="button">Copy prompt</button></div><pre><code>Using my cost per piece from above:
+
+1) Show a wholesale price using cost × 2, and a retail price using wholesale × 2.
+2) Show a direct-sale price that leaves me a [__]% profit after fees. My fees are [__]% of the sale price plus $[__] per order. Fees come out of the sale price, so use: price = (cost + per-order fee) ÷ (1 − fee % − profit %).
+3) For each price, show what I keep and what that works out to per hour.
+
+End with two sentences on the trade-off. Don't tell me which price to pick.</code></pre></div>
+<p>The formula is in the prompt on purpose. Some bots just add the fee percentage on top, which comes out short, because the fee is charged on the higher price too.</p>
+<h2 id="find-the-pieces-you-re-underpricing">Find the pieces you're underpricing</h2>
+<p>Once you've done one product, do the rest in a batch. That's how you spot the ones barely covering costs.</p>
+<div class="prompt" id="prompt-4"><div class="bar"><span>Copy-paste prompt 4</span><button type="button">Copy prompt</button></div><pre><code>Here are my products, with the price I charge now and my best guess at cost per piece and minutes per piece:
+[Product — current price $___ — cost about $___ — about ___ minutes]
+
+Make a table: product, current price, cost, what I keep, and what I earn per hour at my current price. Sort it from lowest hourly to highest.
+
+Flag the bottom three. For each, list two or three questions I should think about (raise the price? make it faster? bundle it? retire it?). Questions only, not decisions.</code></pre></div>
+<p>You might keep an underpriced item because it brings people in. Fine. Now it's a choice, not an accident.</p>
+<h2 id="write-the-price-change-note-then-decide">Write the price-change note, then decide</h2>
+<p>If you're raising prices, a short, calm note helps.</p>
+<div class="prompt" id="prompt-5"><div class="bar"><span>Copy-paste prompt 5</span><button type="button">Copy prompt</button></div><pre><code>Draft a short, friendly note telling my [wholesale shops / regular customers] that prices on [product] go from $___ to $___ starting [date].
+
+Keep it under 80 words. One honest sentence about why (materials and time). No apologizing three times, no fake urgency, no "limited time."
+
+Give me two versions: one for email and one for a shop announcement. I'll edit and send it myself.</code></pre></div>
+<p>Read it out loud. If it doesn't sound like you, ask for a plainer version. Then you decide whether to send it.</p>
+<h2 id="a-five-minute-price-check-every-few-months">A five-minute price check every few months</h2>
+<p>Costs creep, and you get faster. I set a reminder on my own calendar and run this.</p>
+<div class="prompt" id="prompt-6"><div class="bar"><span>Copy-paste prompt 6</span><button type="button">Copy prompt</button></div><pre><code>Quarterly price check. Here's what changed since last time:
+[Material or packaging cost changes, fee changes, minutes per piece now]
+
+1) Update my cost per piece for each product.
+2) Show my hourly at today's prices, next to last time.
+3) Flag anything where my hourly dropped.
+
+Don't change any listings or prices. Just show me the table.</code></pre></div>
+<div class="safer" id="safer-setup"><h2>Safer setup</h2>
+<p>Don't paste passwords, bank logins, card numbers, or customer names and addresses into a chat. Product names and rounded numbers are all the helper needs.</p>
+<p>The helper adds and drafts. You set the price, edit the listing, and send any notes to customers or shops. Nothing gets listed, changed, sent, or paid without your OK. Check one line of math yourself before you trust the whole table.</p>
+<p>This is planning help, not financial, tax, or legal advice, and it isn't a promise about sales.</p>
+</div>
+<h2 id="if-you-want-the-whole-back-office-in-one-place">If you want the whole back office in one place</h2>
+<p>I wrote <a href="https://traciwithani.gumroad.com/l/fjhyov" target="_blank" rel="noopener">The Maker's Back Office</a> ($15) for everything around the making: pricing and profit checks per product (including wholesale math), wholesale pitches, craft fair prep, POD upload tracking, and a receipt sorter for tax time. It includes a one-click ready-made helper setup with the safety rules already built in, and works with Grok Bot. Every routine is also a copy-paste ChatGPT prompt. The bot still drafts. You still approve.</p>
+<p>If listings are the messier part, <a href="https://traciwithani.gumroad.com/l/wwztcx" target="_blank" rel="noopener">The Seller's Daily Helper</a> ($15) covers titles, tags, and descriptions.</p>
+<p>For a smaller start, try the free guide <a href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">10 Copy-Paste AI Prompts to Run Your Day</a>. Pay what you want; $0 is fine.</p>
+      
+<div class="ctabox">
+  <p class="kicker" style="text-align:left">The matching guide</p>
+  <h2>The Maker's Back Office</h2>
+  <p>If you want the full setup, the 7-day plan, and more copy-paste prompts for this kind of day, that's in the guide. The bot still drafts. You still approve.</p>
+  <div class="btns">
+    <a class="btn btn-orange" href="https://traciwithani.gumroad.com/l/fjhyov" target="_blank" rel="noopener">Get The Maker's Back Office · $15</a>
+    <a class="btn btn-ghost" href="/free/">Or start with the free prompts</a>
+  </div>
+</div>
+
+      <div class="share-bar"></div>
+      <nav class="related" aria-label="More tips">
+        <h2>More tips</h2>
+        <ul><li><a href="/blog/how-to-use-ai-for-etsy-listings/"><span>Etsy &amp; shop tips</span>How to Use AI for Etsy Listings Without Sounding Generic</a></li><li><a href="/blog/how-to-meal-plan-with-ai/"><span>Family &amp; meals</span>How to Meal Plan with AI When You're Tired of "What's for Dinner?</a></li><li><a href="/blog/ai-daily-planner-for-adhd/"><span>ADHD &amp; planning</span>How to Use AI as a Daily Planner When You Have ADHD</a></li></ul>
+      </nav>
+    </div>
+  </article>
+</main>
+<footer>
+  <div class="wrap">
+    <img class="fgb" src="/assets/monogram-fgb.png" alt="FGB monogram">
+    
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
+
+    
+    <div class="links">
+      <a href="https://fieldguidetobots.com/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/templates/">Templates</a>
+      <a href="/tools/">Tools</a>
+      <a href="/free/">Free prompts</a>
+      <a href="https://fieldguidetobots.com/#guides">Guides</a>
+      <a href="/tiktok/">TikTok</a>
+      <a href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">Free guide on Gumroad</a>
+      <a href="https://happyplaceinkandart.etsy.com" target="_blank" rel="noopener">Happy Place Ink on Etsy</a>
+    </div>
+
+    
+    <p><b>Made with AI help.</b> These pages were written and designed with AI tools, then checked and edited by a real person at Happy Place Ink.</p>
+    <p>Field Guide to Bots is an independent series by Happy Place Ink. It's not an official xAI or Grok product and isn't endorsed by them. Results depend on you. No income or results are promised. Planning help in these posts is not medical, legal, or financial advice.</p>
+    <p>© 2026 Happy Place Ink · fieldguidetobots.com</p>
+
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".prompt").forEach(function(box){
+  var btn = box.querySelector("button");
+  if(!btn) return;
+  btn.addEventListener("click", function(){
+    var text = box.querySelector("pre").innerText;
+    navigator.clipboard.writeText(text).then(function(){
+      btn.textContent = "Copied";
+      setTimeout(function(){ btn.textContent = "Copy prompt"; }, 1600);
+    });
+  });
+});
+</script>
+
+<script src="/assets/share.js" defer></script>
+<script data-goatcounter="https://fieldguidetobots.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
