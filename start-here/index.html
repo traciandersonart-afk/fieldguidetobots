@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New to bots? Start here · Field Guide to Bots</title>
+<meta name="description" content="New to bots? A plain-English start: what a helper bot is, what you need, how one-click setup works, which guide is for you, and a simple price list.">
+<meta name="author" content="Traci Anderson">
+<meta name="theme-color" content="#173E2B">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://fieldguidetobots.com/start-here/">
+<link rel="icon" type="image/png" href="https://fieldguidetobots.com/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://fieldguidetobots.com/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Field Guide to Bots">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://fieldguidetobots.com/start-here/">
+<meta property="og:title" content="New to bots? Start here · Field Guide to Bots">
+<meta property="og:description" content="New to bots? A plain-English start: what a helper bot is, what you need, how one-click setup works, which guide is for you, and a simple price list.">
+<meta property="og:image" content="https://fieldguidetobots.com/assets/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Field Guide to Bots: independent, plain-English guides to AI helper bots">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="New to bots? Start here · Field Guide to Bots">
+<meta name="twitter:description" content="New to bots? A plain-English start: what a helper bot is, what you need, how one-click setup works, which guide is for you, and a simple price list.">
+<meta name="twitter:image" content="https://fieldguidetobots.com/assets/og-image.jpg">
+<meta name="twitter:image:alt" content="Field Guide to Bots: independent, plain-English guides to AI helper bots">
+<link rel="stylesheet" href="/css/fgb-pages.css">
+<link rel="stylesheet" href="/assets/share.css">
+<style>
+/* Page-only styles for the Start here page. */
+.need{display:grid;gap:16px;margin-top:28px}
+@media (min-width:760px){.need{grid-template-columns:1fr 1fr}}
+.needcard{background:#fff;border:2px solid var(--line);border-radius:18px;padding:22px 22px 24px}
+.needcard h3{font-size:24px;margin:0 0 8px}
+.needcard p{margin:0;color:var(--ink)}
+.whatbot{max-width:720px;margin:0 auto;text-align:left}
+.whatbot p{font-size:20px;margin:0 0 16px}
+.whatbot p:last-child{margin-bottom:0}
+/* steps — same look as the homepage "How it works" cards */
+.steps{display:grid;gap:16px;margin-top:30px}
+@media (min-width:820px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border:2px solid var(--line);border-radius:18px;padding:22px 22px 24px}
+.step .num{width:44px;height:44px;border-radius:50%;background:var(--orange);color:#fff;font-family:var(--serif);font-weight:900;font-size:24px;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:24px;margin:14px 0 6px}
+.step p{margin:0;color:var(--ink)}
+.picks{list-style:none;margin:28px auto 0;padding:0;max-width:840px;display:grid;gap:10px}
+.picks li{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 18px;display:grid;gap:6px}
+@media (min-width:700px){.picks li{grid-template-columns:1.4fr 1fr;align-items:center;gap:16px}}
+.picks .sit{margin:0;color:var(--ink)}
+.picks a{font-family:var(--serif);font-weight:900;color:var(--green);text-decoration:none;font-size:20px;line-height:1.2}
+.picks a:hover{text-decoration:underline}
+.directory{margin-top:28px;overflow-x:auto;background:#fff;border:2px solid var(--line);border-radius:18px}
+.directory table{width:100%;border-collapse:collapse;font-size:16px;min-width:640px}
+.directory th,.directory td{text-align:left;padding:14px 16px;vertical-align:top;border-bottom:1px solid var(--line)}
+.directory thead th{background:var(--green);color:var(--cream);font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:800}
+.directory tbody th{background:transparent;color:var(--green);font-weight:900;text-transform:none;letter-spacing:0;min-width:200px}
+.directory tr:last-child td{border-bottom:0}
+.directory tr.free-row{background:var(--sage)}
+.directory .name{font-family:var(--serif);font-weight:900;color:var(--green);font-size:18px;line-height:1.2}
+.directory .price{font-weight:800;color:var(--orange-text);white-space:nowrap}
+.directory .links{display:flex;flex-wrap:wrap;gap:8px 14px;margin:0}
+.directory .links a{font-weight:800;text-decoration:none}
+.directory .links a:hover{text-decoration:underline}
+.bundles{display:grid;gap:12px;margin:22px auto 0}
+@media (min-width:760px){.bundles{grid-template-columns:1fr 1fr}}
+@media (min-width:960px){.bundles{grid-template-columns:1fr 1fr 1fr}}
+.bundle{display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px dashed var(--green-mid);border-radius:14px;padding:14px 18px;text-decoration:none;color:var(--ink);background:#fff}
+.bundle:hover{background:var(--sage)}
+.bundle b{font-family:var(--serif);font-weight:900;color:var(--green);font-size:20px;display:block;line-height:1.15}
+.bundle .who{display:block;margin-top:4px;font-size:15px;font-weight:600;color:var(--muted)}
+.bundle span.p{font-weight:800;color:var(--orange-text);white-space:nowrap;font-size:18px}
+.faq{max-width:760px;margin:28px auto 0;display:grid;gap:12px}
+.faq details{background:#fff;border:2px solid var(--line);border-radius:14px;padding:4px 18px 4px}
+.faq summary{cursor:pointer;font-family:var(--serif);font-weight:900;color:var(--green);font-size:22px;padding:14px 0;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";float:right;color:var(--orange-text);font-family:var(--sans);font-weight:800}
+.faq details[open] summary:after{content:"–"}
+.faq details p{margin:0 0 16px}
+.sageband{background:var(--sage)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/monogram-fgb.png" alt="" width="38" height="38">Field Guide to Bots</a>
+    <nav aria-label="Site">
+      <a href="/start-here/" aria-current="page">Start here</a>
+      <a href="/#guides">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/templates/">Bot templates</a>
+      <a href="/tools/">Tools</a>
+      <a href="/free/">Free prompts</a>
+      <a href="/tiktok/">TikTok</a>
+    </nav>
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="pagehero">
+    <div class="wrap">
+      <p class="kicker">New to bots?</p>
+      <h1>Start here</h1>
+      <div class="pine" aria-hidden="true"><svg viewBox="0 0 18 22"><path d="M9 0 3 8h3l-5 7h5l-4 5h14l-4-5h5l-5-7h3z"/></svg></div>
+      <p class="lede">You're not late, and you don't need to be "into AI." Here's the plain version: what a bot is, what you need, and which guide fits your actual life.</p>
+      <div class="share-bar" style="max-width:720px;margin:22px auto 0;text-align:left"></div>
+    </div>
+  </section>
+
+  <section id="free" class="sageband" style="padding-top:48px;padding-bottom:48px">
+    <div class="wrap">
+      <div class="freecard">
+        <div>
+          <span class="tag">Start with the free guide</span>
+          <h2>10 Copy-Paste AI Prompts to Run Your Day</h2>
+          <p class="price">Pay what you want · $0 is fine</p>
+          <p style="margin:0">A low-risk first step. Ten prompts for your morning, meals, bills, week, and shop. Copy one, change the parts in [brackets], paste it in, and see what a helper can do.</p>
+        </div>
+        <div>
+          <ul>
+            <li>Works in the free ChatGPT app, or with a Grok Bot account</li>
+            <li>The bot drafts. You stay in charge.</li>
+            <li>Nothing sends, posts, or pays without your OK</li>
+            <li>Enter your email on Gumroad to download</li>
+          </ul>
+          <a class="btn btn-orange" href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">Get the free starter guide</a>
+          <p class="small" style="text-align:center;margin:8px 0 0">Or read more on the <a class="inline" href="/free/">free guide page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="what">
+    <div class="wrap">
+      <p class="kicker">The simple version</p>
+      <h2>What a bot is</h2>
+      <div class="pine" aria-hidden="true"><svg viewBox="0 0 18 22"><path d="M9 0 3 8h3l-5 7h5l-4 5h14l-4-5h5l-5-7h3z"/></svg></div>
+      <div class="whatbot">
+        <p>A bot, around here, is just a helper you talk to in a chat window.</p>
+        <p>You tell it what's going on — the pets, the shop, the pile of sticky notes — and it drafts the boring bits so you're not staring at a blank screen.</p>
+        <p>It doesn't send, post, or pay for anything unless you say so. That's the whole deal.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="need" class="sageband">
+    <div class="wrap">
+      <p class="kicker">The only setup</p>
+      <h2>What you need</h2>
+      <div class="pine" aria-hidden="true"><svg viewBox="0 0 18 22"><path d="M9 0 3 8h3l-5 7h5l-4 5h14l-4-5h5l-5-7h3z"/></svg></div>
+      <p class="lede">Two easy options. You don't need both to start, and you don't need a computer science degree for either one.</p>
+      <div class="need">
+        <div class="needcard">
+          <h3>A free Grok Bot account</h3>
+          <p>This is what the ready-made, one-click templates use. You'll need your own account. Copy the template, make it yours, and you're in.</p>
+        </div>
+        <div class="needcard">
+          <h3>Or the free ChatGPT app</h3>
+          <p>No one-click copy button here. You paste a prompt from the free guide (or from a Field Guide) and go. Same idea: it drafts, you decide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="setup">
+    <div class="wrap">
+      <p class="kicker">One-click setup</p>
+      <h2>How the ready-made bot works</h2>
+      <div class="pine" aria-hidden="true"><svg viewBox="0 0 18 22"><path d="M9 0 3 8h3l-5 7h5l-4 5h14l-4-5h5l-5-7h3z"/></svg></div>
+      <p class="lede">A template is a helper that's already built. You copy it in one click, then make it your own.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Open the template</h3>
+          <p>Get a free Grok Bot account, then open the template page for the guide you picked.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Hit copy</h3>
+          <p>Click "Copy this template." That makes a helper that's yours to keep and tweak.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>Let it draft. You approve.</h3>
+          <p>Tell it what's going on. It writes the first pass. You still send, post, and pay for everything yourself.</p>
+        </div>
+      </div>
+      <p class="note"><b>One heads-up:</b> The Seller's Daily Helper template isn't posted yet, so that guide walks you through the same setup by hand. The other guides have a one-click copy button. And the one rule doesn't change: your bot drafts, you approve.</p>
+    </div>
+  </section>
+
+  <section id="which" class="sageband">
+    <div class="wrap">
+      <p class="kicker">A quick picker</p>
+      <h2>Which guide is for me?</h2>
+      <div class="pine" aria-hidden="true"><svg viewBox="0 0 18 22"><path d="M9 0 3 8h3l-5 7h5l-4 5h14l-4-5h5l-5-7h3z"/></svg></div>
+      <p class="lede">Pick the situation that sounds like this week. You can start with the free guide no matter which way you go later.</p>
+      <ul class="picks">
+        <li><p class="sit">I have an Etsy or print-on-demand shop, and the listing-and-promo pile never ends.</p><a href="/templates/sellers-daily-helper/">The Seller's Daily Helper</a></li>
+        <li><p class="sit">I'm the one holding the family calendar in my head: meals, school, chores, bills.</p><a href="/templates/family-command-center/">The Family Command Center</a></li>
+        <li><p class="sit">My brain has 47 tabs open, and I just need a top 3 and one tiny next step.</p><a href="/templates/adhd-daily-helper/">The ADHD Daily Helper</a></li>
+        <li><p class="sit">I make things. The paperwork — wholesale, fairs, pricing, bills — is the part I dodge.</p><a href="/templates/makers-back-office/">The Maker's Back Office</a></li>
+        <li><p class="sit">I want to help Mom or Dad try a helper, slowly and kindly, with the safety rules first.</p><a href="/templates/mom-and-dads-ai-helper/">Mom &amp; Dad's AI Helper</a></li>
+        <li><p class="sit">I'm paying down debt and I want a calm plan, not a lecture.</p><a href="/templates/paying-off-debt/">Paying Off Debt</a></li>
+        <li><p class="sit">I keep missing due dates, or I have mystery subscriptions I meant to cancel.</p><a href="/templates/the-bills-helper/">The Bills Helper</a></li>
+        <li><p class="sit">I sit pets (or hire a sitter) and I hate writing the nightly "how's my pup" update from scratch.</p><a href="/templates/pet-and-house-sitters-helper/">The Pet &amp; House Sitter's Helper</a></li>
+        <li><p class="sit">I want the bills helper and the debt plan together.</p><a href="https://traciwithani.gumroad.com/l/wsnfdc" target="_blank" rel="noopener">The Money Pair</a></li>
+        <li><p class="sit">I just want to try this without buying anything.</p><a href="/free/">The free starter guide</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div class="wrap">
+      <p class="kicker">The directory</p>
+      <h2>Guides and prices</h2>
+      <div class="pine" aria-hidden="true"><svg viewBox="0 0 18 22"><path d="M9 0 3 8h3l-5 7h5l-4 5h14l-4-5h5l-5-7h3z"/></svg></div>
+      <p class="lede">All of these are instant PDF downloads on Gumroad. Prices below are the live ones. No surprises in the checkout that aren't already on the listing.</p>
+      <div class="directory">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Guide</th>
+              <th scope="col">Who it's for</th>
+              <th scope="col">Price</th>
+              <th scope="col">Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="free-row">
+              <th scope="row" class="name">10 Copy-Paste AI Prompts to Run Your Day</th>
+              <td>Anyone trying this for the first time</td>
+              <td class="price">$0+ · pay what you want, $0 is fine</td>
+              <td>
+                <p class="links">
+                  <a href="/free/">Guide page</a>
+                  <a href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">Get it on Gumroad</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="name">The Seller's Daily Helper</th>
+              <td>Etsy and print-on-demand shop owners</td>
+              <td class="price">$15</td>
+              <td>
+                <p class="links">
+                  <a href="/templates/sellers-daily-helper/">Guide page</a>
+                  <a href="https://traciwithani.gumroad.com/l/wwztcx" target="_blank" rel="noopener">Buy on Gumroad</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="name">The Family Command Center</th>
+              <td>Busy families</td>
+              <td class="price">$14</td>
+              <td>
+                <p class="links">
+                  <a href="/templates/family-command-center/">Guide page</a>
+                  <a href="https://traciwithani.gumroad.com/l/mctlzy" target="_blank" rel="noopener">Buy on Gumroad</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="name">The ADHD Daily Helper</th>
+              <td>ADHD brains (planning help, not medical advice)</td>
+              <td class="price">$12</td>
+              <td>
+                <p class="links">
+                  <a href="/templates/adhd-daily-helper/">Guide page</a>
+                  <a href="https://traciwithani.gumroad.com/l/mgfue" target="_blank" rel="noopener">Buy on Gumroad</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="name">The Maker's Back Office</th>
+              <td>Makers who also have to do the business side</td>
+              <td class="price">$15</td>
+              <td>
+                <p class="links">
+                  <a href="/templates/makers-back-office/">Guide page</a>
+                  <a href="https://traciwithani.gumroad.com/l/fjhyov" target="_blank" rel="noopener">Buy on Gumroad</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="name">Mom &amp; Dad's AI Helper</th>
+              <td>Grown kids helping a parent</td>
+              <td class="price">$12</td>
+              <td>
+                <p class="links">
+                  <a href="/templates/mom-and-dads-ai-helper/">Guide page</a>
+                  <a href="https://traciwithani.gumroad.com/l/tspvkp" target="_blank" rel="noopener">Buy on Gumroad</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="name">Paying Off Debt</th>
+              <td>Anyone making a calm payoff plan (not financial advice)</td>
+              <td class="price">$12</td>
+              <td>
+                <p class="links">
+                  <a href="/templates/paying-off-debt/">Guide page</a>
+                  <a href="https://traciwithani.gumroad.com/l/uydufw" target="_blank" rel="noopener">Buy on Gumroad</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="name">The Bills Helper</th>
+              <td>Anyone staying on top of due dates and subscriptions</td>
+              <td class="price">$12</td>
+              <td>
+                <p class="links">
+                  <a href="/templates/the-bills-helper/">Guide page</a>
+                  <a href="https://traciwithani.gumroad.com/l/tqfnu" target="_blank" rel="noopener">Buy on Gumroad</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="name">The Pet &amp; House Sitter's Helper</th>
+              <td>Sitters and owners (not veterinary advice)</td>
+              <td class="price">$12</td>
+              <td>
+                <p class="links">
+                  <a href="/templates/pet-and-house-sitters-helper/">Guide page</a>
+                  <a href="https://traciwithani.gumroad.com/l/byjvrm" target="_blank" rel="noopener">Buy on Gumroad</a>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="kicker" style="margin-top:36px">Bundles, if you want more than one</p>
+      <div class="bundles">
+        <a class="bundle" href="https://traciwithani.gumroad.com/l/wsnfdc" target="_blank" rel="noopener"><span><b>The Money Pair</b><span class="who">Paying Off Debt + The Bills Helper · save $4</span></span><span class="p">$20</span></a>
+        <a class="bundle" href="https://traciwithani.gumroad.com/l/ofebvq" target="_blank" rel="noopener"><span><b>The Maker Bundle</b><span class="who">Seller's Daily Helper + Maker's Back Office</span></span><span class="p">$25</span></a>
+        <a class="bundle" href="https://traciwithani.gumroad.com/l/upjjnq" target="_blank" rel="noopener"><span><b>All 4 Guides Bundle</b><span class="who">The first four: Seller, Family, ADHD, and Maker's</span></span><span class="p">$39</span></a>
+      </div>
+      <p class="small" style="text-align:center;margin:16px auto 0;max-width:680px">The All 4 bundle is the original four guides, not all eight. There isn't a single site page for the bundles yet, so those buttons go straight to Gumroad.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="sageband">
+    <div class="wrap">
+      <p class="kicker">Quick answers</p>
+      <h2>FAQ</h2>
+      <div class="pine" aria-hidden="true"><svg viewBox="0 0 18 22"><path d="M9 0 3 8h3l-5 7h5l-4 5h14l-4-5h5l-5-7h3z"/></svg></div>
+      <div class="faq">
+        <details open>
+          <summary>How much does this cost?</summary>
+          <p>The starter guide is free. On Gumroad it shows up as $0+ — pay what you want, and $0 is fine. The full guides are $12, $14, or $15. There are a few bundles if you want two or four together. You'll also need a free Grok Bot account or the free ChatGPT app to actually use them.</p>
+        </details>
+        <details>
+          <summary>What about my privacy?</summary>
+          <p>These helpers are set up to draft only. They shouldn't send, post, buy, book, pay, or delete anything without your OK, and they shouldn't ask for your passwords. You decide what you paste in. Don't paste bank logins, Social Security numbers, or card numbers into a chat. If the bot isn't sure, it should ask you instead of guessing.</p>
+        </details>
+        <details>
+          <summary>Do I need to be techy?</summary>
+          <p>Nope. If you can open a link and press a button, you can do this. The full guides take about 15 minutes. If a step feels weird, skip it and come back — the bot works for you, not the other way around.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <img class="fgb" src="/assets/monogram-fgb.png" alt="FGB monogram">
+    <div class="socials" aria-label="Social media">
+      <a href="https://www.tiktok.com/@fieldguidetobots" target="_blank" rel="noopener" aria-label="TikTok: @fieldguidetobots"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.76-.39 2.89 2.89 0 0 1 2.88-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.28a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.73a8.23 8.23 0 0 0 4.76 1.51V6.79a4.84 4.84 0 0 1-1-.1z"/></svg></a>
+      <a href="https://www.instagram.com/happyplaceinkandart/" target="_blank" rel="noopener" aria-label="Instagram: @happyplaceinkandart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+      <a href="https://www.facebook.com/happyplaceink" target="_blank" rel="noopener" aria-label="Facebook: Happy Place Ink"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-7H8.1V12h2.34V9.8c0-2.3 1.37-3.58 3.47-3.58.7 0 1.44.12 2.16.24v2.38h-1.22c-1.2 0-1.57.75-1.57 1.52V12h2.67l-.43 2.88h-2.24v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://x.com/iamtraciwithani" target="_blank" rel="noopener" aria-label="X: @iamtraciwithani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.24 3H21l-6.56 7.49L22.2 21h-6.08l-4.76-6.22L6.1 21H3.32l7.02-8.02L1.88 3h6.24l4.3 5.7L18.24 3zm-1.06 16.18h1.69L6.9 4.72H5.1l12.08 14.46z"/></svg></a>
+    </div>
+    <div class="links">
+      <a href="https://fieldguidetobots.com/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/templates/">Templates</a>
+      <a href="/tools/">Tools</a>
+      <a href="/free/">Free prompts</a>
+      <a href="https://fieldguidetobots.com/#guides">Guides</a>
+      <a href="/tiktok/">TikTok</a>
+      <a href="https://traciwithani.gumroad.com/l/free-ai-prompts" target="_blank" rel="noopener">Free guide on Gumroad</a>
+      <a href="https://happyplaceinkandart.etsy.com" target="_blank" rel="noopener">Happy Place Ink on Etsy</a>
+    </div>
+    <p><b>Made with AI help.</b> These pages were written and designed with AI tools, then checked and edited by a real person at Happy Place Ink.</p>
+    <p>Field Guide to Bots is an independent series by Happy Place Ink. It's not an official xAI or Grok product and isn't endorsed by them. Results depend on you. No income or results are promised. Planning help in these posts is not medical, legal, or financial advice.</p>
+    <p>© 2026 Happy Place Ink · fieldguidetobots.com</p>
+  </div>
+</footer>
+<script src="/assets/share.js" defer></script>
+<script data-goatcounter="https://fieldguidetobots.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
