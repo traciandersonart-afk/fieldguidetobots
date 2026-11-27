@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://fieldguidetobots.com/blog/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -87,6 +87,12 @@
   <url>
     <loc>https://fieldguidetobots.com/blog/how-to-check-if-a-text-is-a-scam-with-chatgpt/</loc>
     <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fieldguidetobots.com/blog/how-to-make-an-adhd-cleaning-schedule-with-chatgpt/</loc>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
